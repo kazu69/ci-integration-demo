@@ -27,7 +27,7 @@ jobs:
 
 workflows:
   version: 2
-  nightly_workflow:
+  scheduled-workflow:
     triggers:
       - schedule:
         cron: "*/5 * * * *"
