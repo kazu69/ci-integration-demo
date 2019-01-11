@@ -19,7 +19,7 @@ jobs:
       - store_test_results:
           path: /tmp/test-results
 
- workflows:
+workflows:
   version: 2
   commit:
     jobs:
