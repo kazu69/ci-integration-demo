@@ -25,15 +25,18 @@ jobs:
       - store_test_results:
           path: /tmp/test-results
 
-workflows:
+ workflows:
   version: 2
+  commit-workflow:
+    jobs:
+      - build 
   scheduled-workflow:
     triggers:
       - schedule:
-        cron: "*/5 * * * *"
-        filters:
-          branches:
-            only:
-              - master
+          cron: "*/5 * * * *"
+          filters:
+            branches:
+              only: master
+
     jobs:
       - build
